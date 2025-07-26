@@ -1,0 +1,158 @@
+SESSION-01  
+===========
+
+Topics:
+- SDLC  
+- Waterfall vs Agile vs DevSecOps  
+- What is DevOps?  
+- Linux  
+
+-------------------------------------------
+
+SDLC --> Software Development Life Cycle
+
+Phases:
+- Requirements analysis
+- Planning
+- Design (General requirements --> Technical)
+- Implementation
+- Testing
+- Deployment
+- Maintenance
+
+-------------------------------------------
+
+Waterfall Model  
+===============
+
+Example: SMS (School Management System)
+
+100 years back --> Final Exam system
+
+Stakeholders:
+- Teachers --> Not serious from DAY-1
+- Parents --> Worried about pass/fail
+- Students --> Not serious from DAY-1
+
+Result: 30% serious early on
+
+Solution: Process Change  
+→ UNIT TEST-I, II, III, IV → Quarterly, Half-yearly, Pre-final, Final  
+→ UNIT TEST-I = 30 days
+
+Impact:
+- Teachers --> Serious from DAY-1
+- Students --> Study at least 1 week before
+- Parents --> Waiting for unit test results
+
+Effectiveness = 80%
+
+Mapping:
+- Parents --> Clients
+- Students --> Developers / Ops / Testers
+- Teachers --> IT Management
+
+Waterfall = Phase-based  
+→ Once you enter Phase-II, can't go back to Phase-I  
+→ 6 months dev, then testing, then deploy  
+→ 100 defects → 10 invalid  
+→ 50 defects → 6 invalid
+
+"Ambassador" pattern
+
+-------------------------------------------
+
+Agile Model  
+===========
+
+Same SDLC Phases
+
+Break project into **Modules**:
+Signup, Login, Menu, Order, Shipping, Delivery, Payments
+
+Signup Module Example:
+- 1 month = 2 weeks dev + 2 weeks testing
+
+→ Dev serious from DAY-1  
+→ Testing happens earlier  
+→ 20 defects → 5 invalid
+
+Car Analogy: Honda City
+
+Waterfall = 10 test cycles → 100  
+Agile = 30 test cycles → 101  
+DevOps = 100 test cycles → 102
+
+Agile is a part of DevOps
+
+-------------------------------------------
+
+DevOps  
+======
+
+Modules same as Agile
+
+Example: Signup  
+DAY-1 → 100 lines of code  
+→ deploy that code → test that code
+
+→ 3 defects found → Teams collaborate to fix
+
+DAY-10 → Deploy & test everything
+
+Definition:
+**DevOps is a process of building, testing, and releasing code on the same day it's when developer writes something. through this process we can acheive colloboration between teams, faster releases and less defects
+Speed and Accuracy
+
+DEV, PROD
+DEV, QA, PROD
+DEV, QA, UAT, PRE-PROD, PROD
+DEV, QA, UAT, PERF, SECURITY, PRE-PROD, PROD
+
+Benefits:
+- Co-operation  
+- Co-ordination  
+- Collaboration  
+- Faster Releases  
+- Less Defects  
+- Speed & Accuracy
+
+Environments:
+DEV → QA → UAT → PERF → SECURITY → PRE-PROD → PROD
+
+-------------------------------------------
+
+Linux  
+=====
+
+Comparison:
+
+Windows:
+- Needs restart often
+- Heavy graphics
+- High resource consumption
+- Less secure
+- Paid
+- Not open source
+
+Linux:
+- Stable (runs for years)
+- No graphics → faster
+- Low resource consumption
+- Secure
+- Free
+- Open source
+
+Used for:  
+- Server creation  
+- Linux commands  
+- Editors (Vim, nano)  
+- User creation  
+- Software installation  
+- Service management
+
+Also includes: AWS account creation
+
+System recommendations:
+- i3, 8GB RAM (minimum)
+- i5 or i7, 16GB RAM (recommended)
