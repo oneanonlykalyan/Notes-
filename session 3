@@ -1,1 +1,116 @@
-hii
+
+SSH EC2 CONNECTION COMMAND
+
+ssh -i <path-to-your-private-key> ec2-user@<IP>
+
+ABSOLUTE VS RELATIVE PATH
+
+/c/devops/daws-82s/daws-82s.pem → Absolute path
+daws-82s/daws-82s.pem → Relative path
+
+LINUX USER PROMPTS AND ROLES
+
+$ → Normal user
+sudo su → Become root
+
+→ Root user prompt
+/home/<username> → User home folder
+/root → Root user home folder
+sudo su - → Lands in /root
+
+LINUX COMMAND STRUCTURE
+
+<command> <options> <input>
+
+→ Short option (single char)
+-- → Long option (full word)
+/ → Root directory of the system
+
+LS COMMAND VARIANTS
+
+ls → List files
+ls -l → Long listing (details)
+ls -lr → Reverse alphabetical
+ls -lt → Latest files first
+ls -ltr → Oldest files first
+ls -ltrh → Human-readable sizes
+ls -la → Show all including hidden files
+
+FILE TYPE IDENTIFIERS IN LS
+
+drwx------ → Directory
+-rw-r--r-- → Normal file
+lrwxrwxrwx → Symlink (Link file)
+
+FILE OPERATIONS
+
+touch <file-name> → Create empty file
+cat > devops.txt → Write to file, end with Ctrl + D
+cat >> devops.txt → Append to existing file
+
+DIRECTORY OPERATIONS
+
+mkdir <folder-name> → Make new folder
+rmdir <folder-name> → Remove empty folder
+rm -r <folder-name> → Delete folder + all inside it
+cp <source> <destination> → Copy file
+cd .. → Go one step back
+
+CURL VS WGET
+
+wget <URL> → Download the file
+curl <URL> → Show contents on screen
+curl <URL> -o <filename> → Download with specific name
+
+Example:
+https://raw.githubusercontent.com/DAWS-82S/notes/refs/heads/main/session-02.md
+
+PIPING AND FILTERING
+
+| → Pipe output from one command to another
+grep <word> <file> → Search word in file
+cat <file> | grep <word> → Search via pipe
+
+CUT COMMAND
+
+cut -d "<delimiter>" -f<field-number>
+
+Example:
+echo "https://raw.githubusercontent.com/DAWS-82S/notes/refs/heads/main/session-02.md" | cut -d "/" -f9
+Output → session-02.md
+
+AWK COMMAND
+
+awk -F "<delimiter>" '{print $<column>}'
+
+Example 1:
+echo "https://raw.githubusercontent.com/DAWS-82S/notes/refs/heads/main/session-02.md" | awk -F "/" '{print $NF}'
+Output → session-02.md (NF = last field)
+
+Note: awk -F "/" '{print $1F}' is wrong. Use $1 or $NF properly.
+
+GET ALL USERS IN LINUX
+
+awk -F ":" '{print $1}' /etc/passwd
+→ This shows all usernames from passwd file
+
+HEAD AND TAIL COMMANDS
+
+head /etc/passwd → First 10 lines
+tail -n 4 /etc/passwd → Last 4 lines
+head -n 10 /etc/passwd | tail -n 7 → Lines 4 to 10
+
+Calculation:
+head 10 → first 10 lines
+tail (10 - 4) + 1 = 7 → so tail -n 7 → gives lines 4 to 10
+
+FIND COMMAND
+
+find <location> -name "<filename>"
+Example:
+find / -name "passwd"
+
+BONUS REMINDERS
+
+vim editor → (To be learned next)
+GitHub formatting → Already applied above, convert as needed
