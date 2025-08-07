@@ -3,10 +3,10 @@ vim editor
 user management
 
 Esc mode is default
-press : to enter into command mode
+press : to enter into command mode.
 
-command mode
-----------------
+command mode.
+----------------------
 :q --> quit
 :wq --> write and quit
 :q! --> force quit without changes
