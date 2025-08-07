@@ -22,7 +22,7 @@ command mode.
 :%d --> delete entire content
 
 ESC Mode
----------------
+--------------------
 u --> undo
 yy --> copy the line
 p --> paste
